@@ -297,7 +297,7 @@ public class PostDaoDb implements PostDao {
             p.setPostOn(rs.getTimestamp("postOn").toLocalDateTime());
             p.setExpireOn(rs.getTimestamp("expireOn").toLocalDateTime());
             p.setPhotoFilename(rs.getString("photoFilename"));
-            //user and cetegory will be associated in methods
+            //user and category will be associated in methods
 
             return p;
         }
