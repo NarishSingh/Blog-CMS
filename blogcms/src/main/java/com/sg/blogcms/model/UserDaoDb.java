@@ -167,12 +167,6 @@ public class UserDaoDb implements UserDao {
 
         /*delete post*/
         //bridge
-        /*
-        String delPC = "DELETE FROM postCategory pc "
-                + "JOIN post p ON p.postId = pc.postId "
-                + "JOIN user u ON u.userId = p.userId "
-                + "WHERE u.userId = ?;";
-         */
         String delPC = "DELETE FROM postCategory "
                 + "WHERE postId IN "
                 + "(SELECT postId FROM post "
@@ -221,7 +215,7 @@ public class UserDaoDb implements UserDao {
             u.setLastName(rs.getString("lastName"));
             u.setEmail(rs.getString("email"));
             u.setPhotoFilename(rs.getString("photoFilename"));
-            //roles will be associated in implentations
+            //roles will be associated in implementations
 
             return u;
         }

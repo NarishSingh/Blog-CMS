@@ -113,11 +113,7 @@ public class PostController {
         post.setApproved(false); //admin must approve
 
         //static page status from check box
-        if (staticPage != null) {
-            post.setStaticPage(true);
-        } else {
-            post.setStaticPage(false);
-        }
+        post.setStaticPage(staticPage != null);
 
         //datetime setting
         post.setCreatedOn(LocalDateTime.now().withNano(0));

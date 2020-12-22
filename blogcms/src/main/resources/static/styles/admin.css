@@ -19,7 +19,7 @@ body {
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
 }
 
-@media (max-width: 767.98px) {
+@media (max-width: 768px) {
     .sidebar {
         top: 5rem;
     }
@@ -96,6 +96,6 @@ body {
 }
 
 table th, table td {
-    vertical-align: center;
-    horiz-align: center;
+    text-align: center;
+    vertical-align: middle;
 }

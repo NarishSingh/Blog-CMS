@@ -48,19 +48,19 @@
             <div class="sidebar-sticky pt-3">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link active" href="admin">
+                        <a class="nav-link active" data-toggle="tab" href="admin">
                             <i class="fas fa-home"></i>
                             Dashboard <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#add-user">
+                        <a class="nav-link" data-toggle="tab" href="#add-user">
                             <i class="fas fa-plus-square"></i>
                             Add New Account
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#user-data-table">
+                        <a class="nav-link" data-toggle="tab" href="#user-data-table">
                             <i class="fas fa-user-cog"></i>
                             Admins/Creators
                         </a>
@@ -181,7 +181,7 @@
                             <td th:text="${user.username}">username</td>
                             <td th:text="${user.firstName + ' ' + user.lastName}">name</td>
                             <td th:text="${user.email}">email</td>
-                            <td><img th:src="${user.photoFilename}" style="height: 50px; padding: 0; margin: 0;"></td>
+                            <td><img th:src="${user.photoFilename}" style="height: 50px; padding: 0; margin: 0 auto;" alt=""></td>
                             <td>
                                 <div th:each="currentRole : ${user.roles}">
                                     <span th:text="${currentRole.role}"></span>

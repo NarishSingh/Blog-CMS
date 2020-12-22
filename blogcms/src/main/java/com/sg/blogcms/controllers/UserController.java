@@ -129,7 +129,7 @@ public class UserController {
      * @param request {HttpServletRequest} pull in form data for edit
      * @param file    {MultipartFile} pulls in image for profile picture
      * @param enabled {Boolean} param to set if an account is enabled/disabled
-     * @param model   {Model} holds user obj's and role list
+     * @param model   {Model} holds user objs and role list
      * @return {String} redirect to admin page if edited, reload editUser page
      *         if error
      */
@@ -139,12 +139,8 @@ public class UserController {
         User user = uDao.readUserById(Integer.parseInt(request.getParameter("id")));
 
         user.setUsername(request.getParameter("username"));
-        //seperate method for password
-        if (enabled != null) {
-            user.setEnabled(true);
-        } else {
-            user.setEnabled(false);
-        }
+        //separate method for password
+        user.setEnabled(enabled != null);
         user.setFirstName(request.getParameter("firstName"));
         user.setLastName(request.getParameter("lastName"));
         user.setEmail(request.getParameter("email"));

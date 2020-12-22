@@ -31,5 +31,4 @@ public interface ImageDao {
      * @return {boolean} true if successfully deleted
      */
     boolean deleteImage(String filename);
-
 }
